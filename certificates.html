@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Joanne's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css"> <!-- link to external CSS -->
+</head>
+
+<body class="content">
+<!-- Nav Bar -->
+<nav class="navbar fixed-top home-custom-navbar navbar-expand-lg">
+  <div class="container justify-content-between">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/Logo.png" alt="Logo" class="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+        <li class="nav-item"><a class="nav-link" href="home.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h1 class="heading">
+    <span class="yellow-text">Certificates</span>
+</h1>
+
+<div class="container portfolio-cards mt-5">
+  <div class="row g-4">
+
+    <!-- Certificate 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+        onclick="showCertificate('LinkedIn Learning Certificate - Adobe Illustrator', 'assets/images/certificate/LinkedIn Learning Certificate - Adobe Illustrator.jpg')">
+        <img src="assets/images/certificate/LinkedIn Learning Certificate - Adobe Illustrator.jpg" class="card-img" alt="Certificate 1">
+      </div>
+    </div>
+
+
+    <!-- Certificate 2 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - Agile Foundations', 'assets/images/certificate/CertificateOfCompletion_Agile Foundations.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_Agile Foundations.jpg" class="card-img"
+                alt="Certificate 2">
+        </div>
+    </div>
+
+    <!-- Certificate 3 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - What Is Scrum', 'assets/images/certificate/CertificateOfCompletion_What Is Scrum.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_What Is Scrum.jpg" class="card-img" alt="Certificate 3">
+        </div>
+    </div>
+
+    <!-- Certificate 4 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - Project Management Foundations Requirements', 'assets/images/certificate/CertificateOfCompletion_Project Management Foundations Requirements.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_Project Management Foundations Requirements.jpg"
+                class="card-img" alt="Certificate 4">
+        </div>
+    </div>
+
+    <!-- Certificate 5 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - Create a Quick Clean and Cheap Website with Bootstrap Templates', 'assets/images/certificate/CertificateOfCompletion_Create a Quick Clean and Cheap Website with Bootstrap Templates.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_Create a Quick Clean and Cheap Website with Bootstrap Templates.jpg"
+                class="card-img" alt="Certificate 5">
+        </div>
+    </div>
+    
+    <!-- Certificate 6 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - Software Testing Foundations Test Planning', 'assets/images/certificate/CertificateOfCompletion_Software Testing Foundations Test Planning.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_Software Testing Foundations Test Planning.jpg"
+                class="card-img" alt="Certificate 6">
+        </div>
+    </div>
+
+    <!-- Certificate 7 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - Photoshop 2021 Quick Start', 'assets/images/certificate/LinkedIn Learning Certificate - Photoshop.jpg')">
+            <img src="assets/images/certificate/LinkedIn Learning Certificate - Photoshop.jpg"
+                class="card-img" alt="Certificate 7">
+        </div>
+    </div>
+    
+    <!-- Certificate 8 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - JavaScript Enhancing the DOM', 'assets/images/certificate/CertificateOfCompletion_JavaScript Enhancing the DOM.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_JavaScript Enhancing the DOM.jpg"
+                class="card-img" alt="Certificate 8">
+        </div>
+    </div>
+
+    <!-- Certificate 9 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - JavaScript Web Form Programming', 'assets/images/certificate/CertificateOfCompletion_JavaScript Web Form Programming.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_JavaScript Web Form Programming.jpg"
+                class="card-img" alt="Certificate 9">
+        </div>
+    </div>
+
+    <!-- Certificate 10 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - Node.js Essential Training', 'assets/images/certificate/CertificateOfCompletion_Node.js Essential Training.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_Node.js Essential Training.jpg"
+                class="card-img" alt="Certificate 10">
+        </div>
+    </div>
+
+    <!-- Certificate 11 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - HandsOn Introduction React', 'assets/images/certificate/CertificateOfCompletion_HandsOn Introduction React.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_HandsOn Introduction React.jpg"
+                class="card-img" alt="Certificate 11">
+        </div>
+    </div>
+
+    <!-- Certificate 12 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('LinkedIn Learning Certificate - Programming Foundations APIs and Web Services 2019', 'assets/images/certificate/CertificateOfCompletion_Programming Foundations APIs and Web Services 2019.jpg')">
+            <img src="assets/images/certificate/CertificateOfCompletion_Programming Foundations APIs and Web Services 2019.jpg"
+                class="card-img" alt="Certificate 12">
+        </div>
+    </div>
+
+    <!-- Certificate 13 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('HackerRank CSS Basic Certificate', 'assets/images/certificate/HackerRank_CSS.jpg')">
+            <img src="assets/images/certificate/HackerRank_CSS.jpg"
+                class="card-img" alt="Certificate 13">
+        </div>
+    </div>
+
+    <!-- Certificate 14 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('HackerRank Javascript Basic Certificate', 'assets/images/certificate/HackerRank_javascript_basic.jpg')">
+            <img src="assets/images/certificate/HackerRank_javascript_basic.jpg"
+                class="card-img" alt="Certificate 14">
+        </div>
+    </div>
+
+    <!-- Certificate 15 -->
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm card-hover" data-bs-toggle="modal" data-bs-target="#certificateModal"
+            onclick="showCertificate('Certification of Participation', 'assets/images/certificate/Prompt Royale certificate.jpg')">
+            <img src="assets/images/certificate/Prompt Royale certificate.jpg"
+                class="card-img" alt="Certificate 15">
+        </div>
+    </div>
+
+     <!-- Back to Portfolio Button -->
+    <div class="text-center mt-5">
+      <a href="about.html#achievements" class="btn view-all-btn">
+        ← Back to Other Achievements
+      </a>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Certificate Modal -->
+<div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="certificateModalLabel">Certificate Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="certificateImage" src="" alt="Certificate" class="img-fluid rounded shadow mb-3">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="assets/images/logo.png" alt="Logo">
+    </div>
+    <nav class="footer-nav">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="home.html#contact">Contact</a>
+    </nav>
+    <div class="socials">
+      <a href="mailto:joannetan116@gmail.com"><img src="assets/images/socials/email_icon.png" alt="Email"></a>
+      <a href="https://www.linkedin.com/in/joanne-tan-jieyin/"><img src="assets/images/socials/LinkedIn.png" alt="LinkedIn"></a>
+      <a href="https://github.com/Joanne1106"><img src="assets/images/socials/github_icon.png" alt="GitHub"></a>
+    </div>
+    <p>© 2025 Joanne Tan</p>
+  </div>
+</footer>
+
+<!-- Link external JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

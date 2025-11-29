@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Joanne's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css"> <!-- link to external CSS -->
+</head>
+
+<body class="content">
+<!-- Nav Bar -->
+<nav class="navbar fixed-top home-custom-navbar navbar-expand-lg">
+  <div class="container justify-content-between">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/Logo.png" alt="Logo" class="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+        <li class="nav-item"><a class="nav-link" href="home.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h1 class="heading fade-up">
+  <span class="white-text">About</span> <span class="yellow-text">Me</span>
+</h1>
+
+<div class="about-container container py-5 fade-up">
+  <div class="row">
+    <!-- Left side: photo -->
+    <div class="col-md-5 text-center">
+      <img src="assets/images/myself.jpg" alt="Your Photo" class="about-photo img-fluid rounded-3 shadow">
+    </div>
+
+    <!-- Right side: text -->
+    <div class="col-md-7">
+      <p class="about-text">
+        I am a year 2 student studying at Republic Polytechnic pursuing a
+        diploma in Digital Design and Development. I specialise in blending
+        clean design with functional code, using both creativity and logic to
+        bring ideas to life.
+      </p>
+      <p class="about-text">
+        Outside of school, I love exploring design trends, learning new coding tricks, 
+        and finding inspiration from everyday life. 
+      </p>
+    </div>
+  </div>
+</div>
+
+<h1 class="heading fade-up"> 
+  <span class="yellow-text">Education & Experience</span>
+</h1>
+
+<div class="container fade-up"> 
+  <div class="row mt-5">
+    
+    <!-- EDUCATION COLUMN -->
+    <div class="col-md-6 about-subsection">
+      <div class="box">
+        <ul class="timeline">
+          
+          <li>
+            <div class="icon">
+              <img src="assets/images/icons/education.png" alt="education" class="custom-icon">
+            </div>
+            <div class="content">
+              <h4>Diploma in Digital Design & Development</h4>
+              <p>Republic Polytechnic — 2024–Present</p>
+              <p>Pursing my diploma in Digital Design & Development at RP has allowed me to take my passion to the next level. Here, I've
+              had the opportunity to work on more challenging and meaningful projects which strengthened both my technical skills and
+              creativity. Beyond the classroom, I took part in service learning and competitions to gain exposure.</p>
+            </div>
+          </li>
+          
+          <li>
+            <div class="icon">
+              <img src="assets/images/icons/education.png" alt="education" class="custom-icon">
+            </div>
+            <div class="content">
+              <h4>Higher Nitec in IT Application Development</h4>
+              <p>ITE College East — 2018–2022</p>
+              <p>Studying Higher Nitec in IT Application Development at ITE College East was where everything clicked for me. I didn't
+              just learn how to code, I learned how much I enjoyed turning ideas into real, working applications. The projects,
+              challenges and small wins during these two years shaped my foundation and sparked my passion to carry on.</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE COLUMN -->
+    <div class="col-md-6 about-subsection">
+      <div class="box">
+        <ul class="timeline">
+          <li>
+            <div class="icon">
+              <img src="assets/images/icons/work.png" alt="work" class="custom-icon">
+            </div>
+            <div class="content">
+              <h4>Octopus8 Pte Ltd</h4>
+              <p>Internship — Oct 2023–Mar 2024</p>
+              <p>During my internship, I assisted in marketing and technical operations by creating digital forms and user guides for workshops, desigining
+                email marketing EDMs and conducting lead research and outreach for B2B campaigns. Supported the technical team with
+                call flow and IVR development as well as UAT testing to ensure functionality and user experience.</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<h1 class="heading fade-up">
+  <span class="yellow-text">My Skills</span>
+</h1>
+<section class="skills-section fade-up">
+  <div class="skill-card">
+    <h4>HTML</h4>
+  </div>
+
+  <div class="skill-card">
+    <h4>CSS</h4>
+  </div>
+
+  <div class="skill-card">
+    <h4>Javascript</h4>
+  </div>
+
+  <div class="skill-card">
+    <h4>React Native</h4>
+  </div>
+
+  <div class="skill-card">
+    <h4>React</h4>
+  </div>
+
+  <div class="skill-card">
+    <h4>Illustrator</h4>
+  </div>
+
+  <div class="skill-card">
+    <h4>Photoshop</h4>
+  </div>
+
+  <div class="skill-card">
+    <h4>Figma</h4>
+  </div>
+
+
+</section>
+
+
+
+<section id="achievements" class="py-5">
+  <div class="container text-center fade-up">
+    <h1 class="heading">
+      <span class="yellow-text">Achievements</span>
+    </h1>
+    
+    <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="3"></button>
+      </div>
+
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="card achievements-card">
+            <img src="assets/images/icons/certificate_icon.png" class="card-img-top rounded-top-4" alt="Certificate">
+            <div class="card-body">
+              <h3 class="card-title">Certificates</h3>
+              <p class="card-text">Throughout my diploma studies, I have earned a variety of industry-recognized certifications that showcase my commitment
+              to continuous learning and technical proficiency. These include specialized courses completed through platforms such as
+              LinkedIn Learning, DataCamp and many more. These certifications strengthen my software development skills and complement my
+              expertise in design and development.</p>
+              <div class="mt-4">
+                <a href="certificates.html" class="btn view-all-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="card achievements-card">
+            <img src="assets/images/icons/award.png" class="card-img-top rounded-top-4" alt="Award">
+            <div class="card-body">
+              <h3 class="card-title">Awards</h3>
+              <p class="card-text">Awarded for the most innovative and impactful project presentation in class.</p>
+              <div class="mt-4">
+                <a href="certificates.html" class="btn view-all-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="card achievements-card">
+            <img src="assets/images/icons/volunteer.png" class="card-img-top rounded-top-4" alt="Experience">
+            <div class="card-body">
+              <h3 class="card-title">Volunteer Experiences</h3>
+              <p class="card-text">My volunteering experiences have provided valuable opportunities to develop interpersonal skills, collaborate
+              effectively with diverse teams and contribute meaningfully to community projects.</p>
+              <div class="mt-4">
+                <a href="certificates.html" class="btn view-all-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="card achievements-card">
+            <img src="images/ny.jpg" class="card-img-top rounded-top-4" alt="Experience">
+            <div class="card-body">
+              <h3 class="card-title">Competition</h3>
+              <p class="card-text">Participated in immersive workshops to improve technical and creative skills.</p>
+              <div class="mt-4">
+                <a href="certificates.html" class="btn view-all-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Certificate Modal -->
+<div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="certificateModalLabel">Certificate Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="certificateImage" src="" alt="Certificate" class="img-fluid rounded shadow mb-3">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="assets/images/logo.png" alt="Logo">
+    </div>
+    <nav class="footer-nav">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="socials">
+      <a href="mailto:joannetan116@gmail.com"><img src="assets/images/socials/email_icon.png" alt="Email"></a>
+      <a href="https://www.linkedin.com/in/joanne-tan-jieyin/"><img src="assets/images/socials/LinkedIn.png" alt="LinkedIn"></a>
+      <a href="https://github.com/Joanne1106"><img src="assets/images/socials/github_icon.png" alt="GitHub"></a>
+    </div>
+    <p>© 2025 Joanne Tan</p>
+  </div>
+</footer>
+
+<!-- Link external JS -->
+<script src="script.js"></script>
+
+
+</body>
+</html>
