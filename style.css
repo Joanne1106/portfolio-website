@@ -1,0 +1,859 @@
+/* Body background */
+body {
+  background-color: #011627; 
+  color: white;
+  overflow-x: hidden;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Body background for About, Portfolio & Contact */
+.content {
+  background-color: #011627; 
+  color: white;
+  padding-top: 90px;
+}
+
+/* Home.html */
+/* Navigation Bar */
+.nav-link {
+  color: white; /* default color */
+  font-size: 21px;
+  letter-spacing: 1px;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #FEE9B0;
+}
+
+/* Active (current page) effect */
+.nav-link.active {
+  color: #FEE9B0 !important;
+  font-weight: 600;
+}
+
+/* Optional underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #FEE9B0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+/* Optional: spacing between items */
+.nav-item {
+  margin: 0 10px;
+}
+
+
+/* Base navbar style (at the top of page) for home.html*/
+.home-custom-navbar {
+  background: none; /* fully transparent */
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* When scrolled down, show transparent dark background */
+.home-custom-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.5); /* adjust opacity/color as you like */
+  backdrop-filter: blur(8px); /* adds nice frosted look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===== Hero Section ===== */
+.hero-section {
+  background: url("assets/images/Background.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* full screen height */
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* keep text readable */
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 0 10px #CABBF5, 0 0 20px #CABBF5;
+  animation: glowPulse 2s infinite;
+}
+
+/* Logo */
+.logo {
+  height: 90px;
+}
+
+/* Logo on right side */
+.hero-logo {
+  width: 320px;
+  height: auto;
+  animation: rotateLogo 6s linear infinite;
+  user-select: none;
+  cursor: default;
+  filter: drop-shadow(0 8px 10px #CABBF5);
+  transition: filter 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* Hero logo with smooth floating animation */
+@keyframes rotateLogo {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Role */
+#role {
+  border-right: 3px solid #fff;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+#role {
+  animation: blink 0.7s step-end infinite;
+}
+
+/* Default navbar: transparent */
+.custom-navbar {
+  transition: background-color 0.3s ease;
+  background-color: #011627;
+}
+
+/* Navbar when scrolling down */
+.custom-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.5); /* or any color you like */
+  backdrop-filter: blur(8px); /* adds nice frosted look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Us Section*/
+.about-section {
+  display: flex;
+  align-items: center; /* vertically center the row */
+  height: 600px;
+}
+
+.about-section h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  color: #FEE9B0;
+}
+
+/* Portfolio Section*/
+.portfolio-section {
+  display: flex;
+}
+
+.portfolio-section h2 {
+  font-size: 45px;
+  /* margin-bottom: 10px; */
+  color: #FEE9B0;
+  text-align: center;
+}
+
+
+/* Custom button styles */
+.btn-portfolio-custom {
+  background-color: transparent;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+  color: white;
+  border: none;
+  padding: 14px 90px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;  /* stack text above image */
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn-portfolio-custom img.btn-img {
+  margin-top: 8px;
+  width: 28px;   /* adjust size */
+  height: 28px;
+  object-fit: contain;
+}
+
+.btn-portfolio-custom:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-img {
+    filter: invert(100%); /* turns black to white */
+}
+
+/* Cards for certificate & awards */
+.card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card-hover:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+
+/* ===== Modal Fade Animations ===== */
+
+/* Apply to the modal image and text */
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Subtle fade-in for image and text */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-body img,
+.modal-body p {
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.modal-body p {
+  animation-delay: 0.4s;
+}
+
+/* View all button */
+.view-all-btn {
+  background-color: transparent;         /* no fill initially */
+  color: #FEE9B0;                        /* text yellow */
+  border: 2px solid #FEE9B0;             /* yellow outline */
+  transition: 0.3s;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 30px;
+}
+
+.view-all-btn:hover {
+  background-color: #FEE9B0;             /* yellow fill on hover */
+  color: #332841;                        /* dark text for contrast */
+}
+/* Contact Section */
+.contact-section h2 {
+  font-size: 45px;
+  color: #FEE9B0;
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 10px;
+}
+.contact-section p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+}
+
+.contact-box {
+  background-color: white; /* transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: translateY(-10px);
+  background-color: whitesmoke;
+}
+
+.contact-box h5 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+.contact-box p {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact-icon {
+  height: 32px;
+  width: 32px;
+  filter: invert(100%); /* turns black to white */
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  font-size: 45px;
+  margin: 60px 0 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.heading .white-text {
+  color: white;
+}
+
+.heading .yellow-text {
+  color: #FEE9B0;
+}
+
+/* About.html */
+.about-photo {
+  max-width: 450px; /* control photo size */
+}
+
+.about-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+}
+
+/* Education and experience section */
+.about-section {
+  color: white;
+}
+
+/* Box styling */
+.box {
+  background: transparent;
+  border-radius: 15px;
+  padding: 20px;
+  height: 400px;
+  margin: 5px; /* spacing so it doesn’t stick to edges */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Timeline structure */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;               /* aligns with icon center */
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: #CABBF5;      /* pastel vertical line */
+
+}
+
+.timeline li {
+  position: relative;
+  display: flex;
+  align-items: center;        /* Align icon and text vertically center */
+  padding-left: 60px;
+}
+
+.timeline .icon {
+  position: absolute;
+  left: 0;
+  top: 0;                     /* Ensures icon stays at top */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #CABBF5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.timeline .custom-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.timeline .content {
+  background: none;          /* no box background */
+  color: white;          /* your theme color */
+  margin-top: -100px;
+}
+
+.timeline .content h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.timeline .content p {
+  font-size: 0.9rem;
+}
+
+/* My Skills Section Layout */
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* slightly wider cards */
+  gap: 40px; /* increased gap for more space between cards */
+  justify-content: center; /* centers grid items horizontally */
+  align-items: start;
+  width: 90%; /* make it responsive while staying centered */
+  max-width: 1200px; /* slightly wider max width */
+  margin: 0 auto; /* centers the whole section */
+  padding: 40px 20px; /* adds breathing room around the section */
+}
+
+/* Skill Card */
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-card {
+  background: #011627; /* or your card background */
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+  width: 200px;  /* adjust width as needed */
+  text-align: center;
+  color: #fff;
+  font-family: serif;
+}
+
+
+
+/* ===== Achievements Section ===== */
+/* ===== Card Style ===== */
+#achievements .card-img-top {
+  height: auto; /* adjust as you prefer */
+  width: 200px;
+  margin: 0 auto; /* Centers horizontally */
+  display: block;
+  padding-top: 10px;
+  object-fit: cover; /* keeps image full and tidy */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.achievements-card {
+  background-color: #011627; 
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+  color: white;
+  border-radius: 15px;
+  padding: 5px;
+  height: 500px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.achievements-card .card-text {
+}
+
+#achievements .carousel-item {
+  background-color: transparent; /* whole slide background */
+  padding: 15px;           /* spacing so card isn’t stuck to edges */
+}
+
+/* ===== Carousel Controls ===== */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #FEE9B0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Portfolio.html */
+/* Style for the subheading text */
+.subheading {
+  font-size: 1.1rem;; /* Adjust font size */
+  color: white; /* color for subheading */
+  text-align: center;
+  margin: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Filter button styles */
+/* ===== Filter Buttons ===== */
+.filters {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Base button style */
+.filter-btn {
+  flex: 1;
+  max-width: 210px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  color: black; /* text color inside */
+}
+/* ===== Individual Button Colours ===== */
+
+/* All */
+.filter-btn[data-filter="all"] {
+  background-color: transparent;
+  color: white;                        
+  border: 2px solid white;  
+
+}
+.filter-btn[data-filter="all"]:hover,
+.filter-btn[data-filter="all"].active {
+  background-color: white;
+  color: black;
+}
+
+/* Design */
+.filter-btn[data-filter="design"] {
+  background-color: transparent;         /* no fill initially */
+  color: #F9A29C;                        /* text yellow */
+  border: 2px solid #F9A29C;  
+}
+.filter-btn[data-filter="design"]:hover,
+.filter-btn[data-filter="design"].active {
+  background-color: #F9A29C;
+  color: black;
+}
+
+/* Development */
+.filter-btn[data-filter="mobiledevelopment"] {
+  background-color: transparent;
+  color: #A7C7E7;
+  border: 2px solid #A7C7E7;
+}
+.filter-btn[data-filter="mobiledevelopment"]:hover,
+.filter-btn[data-filter="mobiledevelopment"].active {
+  background-color: #A7C7E7;
+  color: black;
+}
+
+/* Immersive Technology */
+.filter-btn[data-filter="immersivetech"] {
+  background-color: transparent;
+  color: #CABBF5;
+  border: 2px solid #CABBF5;
+}
+.filter-btn[data-filter="immersivetech"]:hover,
+.filter-btn[data-filter="immersivetech"].active {
+  background-color: #CABBF5;
+  color: black;
+}
+
+/* UI/UX Design Prototype */
+.filter-btn[data-filter="uiux"] {
+  background-color: transparent;
+  color: #bde3de;
+  border: 2px solid #bde3de;
+}
+.filter-btn[data-filter="uiux"]:hover,
+.filter-btn[data-filter="uiux"].active {
+  background-color: #bde3de;
+  color: black;
+}
+
+/* Optional: make active filter stand out slightly */
+.filter-btn.active {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+
+
+/* Portfolio cards styling */
+/* .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(202, 187, 245, 0.8), 0 0 30px rgba(59, 51, 134, 0.6);
+} */
+
+/* Portfolio cards styling */
+.portfolio-cards .card-img {
+  object-fit: cover; /* Make the image cover the card */
+  width: 100%;
+  height: 250px; /* Adjust as needed */
+}
+
+.portfolio-cards .card-title {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-img {
+  width: 35px; /* adjust icon size */
+  height: 30px;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 4px; /* spacing between icon and text */
+}
+
+/* Show icon on hover */
+.nav-link:hover .nav-img {
+  opacity: 10;
+  transform: translateY(0);
+}
+
+/* Immersive technology */
+.immersivetech-card-overlay {
+  position: absolute;
+  inset: 0; /* fills entire card */
+  background: rgba(197, 179, 244); /* softer faded overlay */
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease, background 0.5s ease;
+  border-radius: 8px; /* matches card corners */
+}
+
+/* Show overlay on hover */
+.card-hover:hover .immersivetech-card-overlay {
+  opacity: 1;
+}
+ 
+/* Design */
+.design-card-overlay {
+  position: absolute;
+  inset: 0; /* fills entire card */
+  background: rgba(249, 162, 156); /* softer faded overlay */
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease, background 0.5s ease;
+  border-radius: 8px; /* matches card corners */
+} 
+
+/* Show overlay on hover */
+.card-hover:hover .design-card-overlay {
+  opacity: 1;
+}
+
+/* Mobile App Development  */
+.mobiledevelopment-card-overlay {
+  position: absolute;
+  inset: 0; /* fills entire card */
+  background: rgba(167, 199, 231); /* softer faded overlay */
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease, background 0.5s ease;
+  border-radius: 8px; /* matches card corners */
+} 
+
+/* Show overlay on hover */
+.card-hover:hover .mobiledevelopment-card-overlay {
+  opacity: 1;
+} 
+
+/* Contact.html */
+/* Form container */
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Form labels and inputs */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form input, 
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid white; /* subtle border */
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: white;
+}
+
+/* Name row */
+.name-row {
+  display: flex;
+  gap: 20px; /* space between inputs */
+}
+
+.name-row div {
+  flex: 1; /* makes them equal width */
+}
+
+/* Contact Form Button */
+.btn-custom {
+  background-color: transparent;         /* no fill initially */
+  color: #FEE9B0;                        /* text yellow */
+  border: 2px solid #FEE9B0;             /* yellow outline */
+  transition: 0.3s;
+  width: 30%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: block;
+}
+
+.btn-custom:hover {
+  background-color: #FEE9B0;             /* yellow fill on hover */
+  color: #332841;                        /* dark text for contrast */
+}
+
+/* Title */
+#contact h3 {
+  color: #FEE9B0; /* Light yellow accent */
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  background-color: black; /* adjust to match your theme */
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo img {
+  max-width: 60px; /* adjust size */
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 21px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white; 
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #FEE9B0; /* light yellow hover */
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+.contact-icon {
+  width: 40px; /* Adjust size */
+  height: 40px;
+  object-fit: contain; /* keeps proportions */
+}
+
+/* Smooth fade-up animation for home.html*/
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px); /* start slightly lower */
+  transition: opacity 2.0s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              transform 2.0s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
