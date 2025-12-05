@@ -188,7 +188,7 @@ body {
   flex-direction: column;  /* stack text above image */
   align-items: center;
   justify-content: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .btn-portfolio-custom img.btn-img {
@@ -261,7 +261,7 @@ body {
   color: #FEE9B0;                        /* text yellow */
   border: 2px solid #FEE9B0;             /* yellow outline */
   transition: 0.3s;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-top: 30px;
 }
 
@@ -278,7 +278,7 @@ body {
   padding-bottom: 10px;
 }
 .contact-section p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.1rem;
 }
 
