@@ -197,6 +197,36 @@ filterButtons.forEach(button => {
     });
 });
 
+// ========================= SKILLS FILTER ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const skillCards = document.querySelectorAll(".skill-card");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+      // Active button UI
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const category = btn.getAttribute("data-category");
+
+      skillCards.forEach(card => {
+        const cardCategory = card.getAttribute("data-category");
+
+        if (category === "all" || category === cardCategory) {
+          card.classList.remove("hide");
+        } else {
+          card.classList.add("hide");
+        }
+      });
+    });
+  });
+});
+
+
+
+
 
 
 

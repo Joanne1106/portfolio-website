@@ -422,37 +422,36 @@ body {
 }
 
 /* My Skills Section Layout */
-.skills-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* slightly wider cards */
-  gap: 40px; /* increased gap for more space between cards */
-  justify-content: center; /* centers grid items horizontally */
-  align-items: start;
-  width: 90%; /* make it responsive while staying centered */
-  max-width: 1200px; /* slightly wider max width */
-  margin: 0 auto; /* centers the whole section */
-  padding: 40px 20px; /* adds breathing room around the section */
+.skills-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-/* Skill Card */
-.skills-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.filter-btn {
+  padding: 8px 16px;
+  background: #332841;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #CABBF5;
+  color: black;
 }
 
 .skill-card {
-  background: #011627; /* or your card background */
-  padding: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
-  width: 200px;  /* adjust width as needed */
-  text-align: center;
-  color: #fff;
-  font-family: serif;
+  transition: 0.3s ease;
 }
-
+.skill-card.hide {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
 
 
 /* ===== Achievements Section ===== */
