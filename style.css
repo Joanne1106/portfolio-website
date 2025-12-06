@@ -297,13 +297,13 @@ body {
   margin-bottom: 5px;
   font-size: 1rem;
   color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 600;
 }
 
 .contact-box p {
   color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .contact-icon {
@@ -317,7 +317,7 @@ body {
   text-align: center;
   font-size: 45px;
   margin: 60px 0 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .heading .white-text {
@@ -334,7 +334,7 @@ body {
 }
 
 .about-text {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.1rem;
 }
 
@@ -517,7 +517,7 @@ body {
   color: white; /* color for subheading */
   text-align: center;
   margin: 20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Filters */
@@ -543,7 +543,7 @@ body {
   padding: 10px;
   border-radius: 8px;
   border: none;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
   color: black; /* text color inside */
@@ -633,7 +633,7 @@ body {
 
 .portfolio-cards .card-title {
   color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .nav-img {
@@ -728,7 +728,7 @@ form {
 form label {
   display: block;
   margin-bottom: 6px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 form input, 
@@ -765,7 +765,7 @@ form textarea::placeholder {
   border: 2px solid #FEE9B0;             /* yellow outline */
   transition: 0.3s;
   width: 30%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: block;
 }
 
@@ -786,7 +786,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .footer-content {
