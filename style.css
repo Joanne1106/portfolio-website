@@ -424,8 +424,9 @@ body {
 /* My Skills Section Layout */
 .skills-filter {
   display: flex;
+  justify-content: center;   /* centers horizontally */
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .filter-btn {
@@ -444,14 +445,39 @@ body {
   color: black;
 }
 
-.skill-card {
-  transition: 0.3s ease;
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;    /* centers the cards */
+  gap: 20px;
 }
+
+.skill-card {
+  width: 140px;
+  height: 90px;
+  background-color: #011627; 
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4); 
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s ease;
+  cursor: default;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
 .skill-card.hide {
   opacity: 0;
   transform: scale(0.9);
   pointer-events: none;
 }
+
 
 
 /* ===== Achievements Section ===== */
