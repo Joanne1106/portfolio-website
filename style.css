@@ -467,17 +467,6 @@ body {
   cursor: default;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-.skill-card.hide {
-  opacity: 0;
-  transform: scale(0.9);
-  pointer-events: none;
-}
-
 
 
 /* ===== Achievements Section ===== */
