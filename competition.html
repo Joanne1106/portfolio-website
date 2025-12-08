@@ -34,57 +34,59 @@
 </nav>
 
 <h1 class="heading">
-    <span class="white-text">Awards</span>
+    <span class="white-text">Competition</span>
 </h1>
 
-<div class="container portfolio-cards mt-5">
-  <div class="row g-4">
+<!-- Project Content -->
+<section class="py-5">
+  <div class="container fade-up" style="max-width: 1000px;">
 
-    <!-- Award 1 -->
-    <div class="col-md-4">
-        <div class="card h-100 shadow-sm card-hover"
-            onclick="showAward('The Ngee Ann Kongsi Study Award', 'assets/images/certificate/StudyAward.png')">
-            <img src="assets/images/certificate/StudyAward.png" class="card-img" alt="Award 1">
+    <!-- Main Row: Text Left + Image Right -->
+    <div class="row align-items-start g-5 mb-5">
+
+      <!-- Left Column: Text -->
+      <div class="col-md-7 d-flex flex-column justify-content-start">
+
+        <!-- Text Content -->
+        <div class="mb-4">
+          <h4 class="fw-bold mb-3">RP Prompt Royale Academia</h4>
+          <p>
+            In June 2025, I participated in the RP Prompt Royale Competition, an exciting challenge focused on creativity and
+            effective prompt engineering. This competition allowed me to explore how well-designed prompts can guide AI models to
+            produce accurate, meaningful, and high-quality responses.
+          </p>
+          <p>
+            Through this experience, I gained valuable insights into the principles of prompt design and learned how different
+            prompting techniques can influence AI behavior. It also exposed me to new ways of thinking about human-AI interaction
+            and communication.
+          </p>
+          <p>
+            As part of the competition, I crafted prompts that were designed to generate clear, purposeful outputs tailored to
+            specific tasks. This strengthened my ability to think critically, iterate quickly, and communicate instructions in a
+            precise and structured manner.
+          </p>
+        
         </div>
+
+      </div> 
+
+    <!-- Right Column: Image -->
+    <div class="col-md-5 d-flex align-items-center">
+        <img src="assets/images/RP prompt royale.jpg" alt="RP prompt royale" class="img-fluid rounded shadow">
     </div>
-
-    <!-- Award 2 -->
-    <div class="col-md-4">
-        <div class="card h-100 shadow-sm card-hover"
-            onclick="showAward('Edusave Merit Bursary', 'assets/images/certificate/Edusave Bursary.jpg')">
-            <img src="assets/images/certificate/Edusave Bursary.jpg" class="card-img" alt="Award 2">
-        </div>
-    </div>
-
-
-
-     <!-- Back to Portfolio Button -->
+    
+    <!-- Back to Portfolio Button -->
     <div class="text-center mt-5">
-      <a href="about.html#achievements" class="btn view-all-btn">
-        ← Back to Other Achievements
-      </a>
+        <a href="about.html#achievements" class="btn view-all-btn">
+            ← Back to Other Achievements
+        </a>
     </div>
 
     </div>
   </div>
-</div>
+</section>
 
 
-<!-- Award Modal -->
-<div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title" id="awardModalLabel">Award Title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body text-center">
-        <img id="awardImage" src="" alt="Award" class="img-fluid rounded shadow mb-3">
-        <p id="awardDescription"></p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Footer -->
 <footer>

@@ -107,30 +107,50 @@ window.addEventListener("scroll", () => {
 });
 
 // ==================== Detect when skill cards are visible on screen ======================
-const skillCards = document.querySelectorAll('.skill-card');
+document.addEventListener("DOMContentLoaded", () => {
+  const navHome = document.querySelector('a[href="#home"], a[href="index.html#home"]');
+  const navContact = document.querySelector('a[href="#contact"], a[href="index.html#contact"]');
+  const contactSection = document.getElementById("contact");
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const card = entry.target;
-            const progress = card.querySelector('.progress');
-            const percent = card.getAttribute('data-percent');
+  // Function: Update active links based on scroll position
+  function updateActive() {
+    const contactTop = contactSection.offsetTop - 150; // adjust for navbar height
 
-            // Animate progress bar
-            progress.style.width = percent + '%';
+    // If before contact section → HOME active
+    if (window.scrollY < contactTop) {
+      navHome.classList.add("active");
+      navContact.classList.remove("active");
+    }
+    // If contact section visible → CONTACT active
+    else {
+      navHome.classList.remove("active");
+      navContact.classList.add("active");
+    }
+  }
 
-            // Animate card appearance
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
+  updateActive();
+  window.addEventListener("scroll", updateActive);
 
-            // Stop observing once animation has played
-            observer.unobserve(card);
-        }
+  // Smooth scroll override for homepage
+  const links = document.querySelectorAll('.navbar-nav .nav-link');
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+
+      // Only intercept if we are on index.html
+      if ((window.location.pathname.endsWith("index.html") || window.location.pathname === "/") &&
+          href.startsWith("index.html#")) {
+
+        e.preventDefault();
+        const targetId = href.split("#")[1];
+        const target = document.getElementById(targetId);
+
+        target?.scrollIntoView({ behavior: "smooth" });
+      }
     });
-}, { threshold: 0.3 });
+  });
+});
 
-// Observe each skill card
-skillCards.forEach(card => observer.observe(card));
 
 // ========================== TITLE ==========================================
 const roles = ["Software Developer", "UI/UX Designer"];
@@ -199,30 +219,46 @@ filterButtons.forEach(button => {
 
 // ========================= SKILLS FILTER ===============================
 document.addEventListener("DOMContentLoaded", () => {
-  const filterButtons = document.querySelectorAll(".filter-btn");
+  const filterButtons = document.querySelectorAll(".skills-filter-btn");
   const skillCards = document.querySelectorAll(".skill-card");
 
+  const defaultCategory = "Front-end";
+
+  // Set default active button
+  filterButtons.forEach(btn => {
+    if (btn.dataset.category === defaultCategory) {
+      btn.classList.add("active");
+    }
+  });
+
+  // Filter function (keeps flex display!)
+  function filterSkills(category) {
+    skillCards.forEach(card => {
+      if (card.dataset.category === category) {
+        card.style.display = "flex";   // important!
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Initial filter
+  filterSkills(defaultCategory);
+
+  // Button click events
   filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-
-      // Active button UI
       filterButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
-      const category = btn.getAttribute("data-category");
-
-      skillCards.forEach(card => {
-        const cardCategory = card.getAttribute("data-category");
-
-        if (category === "all" || category === cardCategory) {
-          card.classList.remove("hide");
-        } else {
-          card.classList.add("hide");
-        }
-      });
+      const category = btn.dataset.category;
+      filterSkills(category);
     });
   });
 });
+
+
+
 
 
 

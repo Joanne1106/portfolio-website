@@ -424,49 +424,51 @@ body {
 /* My Skills Section Layout */
 .skills-filter {
   display: flex;
-  justify-content: center;   /* centers horizontally */
-  gap: 12px;
-  margin-bottom: 25px;
+  justify-content: center;
+  gap: 16px; /* space between buttons */
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
-.filter-btn {
-  padding: 16px 32px;
-  background: #332841;
-  color: white;
-  border: none;
-  border-radius: 8px;
+.skills-filter-btn {
+  padding: 10px;        /* taller and wider buttons */
+  border-radius: 8px;       /* rounded corners */
   cursor: pointer;
   transition: 0.3s;
+  max-width: 210px;         /* ensures consistent width */
+  text-align: center;
+  background-color: transparent;
+  color: white;                        
+  border: 2px solid white;  
+
 }
 
-.filter-btn.active,
-.filter-btn:hover {
-  background: #CABBF5;
-  color: black;
+.skills-filter-btn.active {
+  background: white;
+  color: #000;
 }
 
-.skills-section {
+.skills-cards { 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;    /* centers the cards */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: 20px;
 }
 
 .skill-card {
-  width: 140px;
-  height: 90px;
-  background-color: #011627; 
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4); 
+  width: 180px;
+  height: 100px;
+  background-color: #011627;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   color: white;
-  transition: 0.3s ease;
-  cursor: default;
+  transition: 0.3s ease, transform 0.3s ease;
 }
-
 
 
 /* ===== Achievements Section ===== */
@@ -491,9 +493,6 @@ body {
   height: 500px;
   max-width: 1100px;
   margin: 0 auto;
-}
-
-.achievements-card .card-text {
 }
 
 #achievements .carousel-item {
@@ -728,6 +727,28 @@ body {
 
 /* Show overlay on hover */
 .card-hover:hover .mobiledevelopment-card-overlay {
+  opacity: 1;
+} 
+
+/* UI/UX design  */
+.uiux-card-overlay {
+  position: absolute;
+  inset: 0; /* fills entire card */
+  background: rgba(189, 227, 222); /* softer faded overlay */
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease, background 0.5s ease;
+  border-radius: 8px; /* matches card corners */
+} 
+
+/* Show overlay on hover */
+.card-hover:hover .uiux-card-overlay {
   opacity: 1;
 } 
 
