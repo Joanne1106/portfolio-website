@@ -624,6 +624,18 @@ body {
   color: black;
 }
 
+/* Web Development */
+.filter-btn[data-filter="webdevelopment"] {
+  background-color: transparent;
+  color: #F4A261;
+  border: 2px solid #F4A261;
+}
+.filter-btn[data-filter="webdevelopment"]:hover,
+.filter-btn[data-filter="webdevelopment"].active {
+  background-color: #F4A261;
+  color: black;
+}
+
 /* Optional: make active filter stand out slightly */
 .filter-btn.active {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
@@ -750,7 +762,29 @@ body {
 /* Show overlay on hover */
 .card-hover:hover .uiux-card-overlay {
   opacity: 1;
-} 
+}
+
+/* Web Development  */
+.webdevelopment-card-overlay {
+  position: absolute;
+  inset: 0; /* fills entire card */
+  background: rgba(244, 162, 97); /* softer faded overlay */
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease, background 0.5s ease;
+  border-radius: 8px; /* matches card corners */
+}
+
+/* Show overlay on hover */
+.card-hover:hover .webdevelopment-card-overlay {
+  opacity: 1;
+}
 
 /* Contact.html */
 /* Form container */
