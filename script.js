@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // ========================== TITLE ==========================================
-const roles = ["Software Developer", "UI/UX Designer"];
+const roles = ["UI/UX Designer", "Software Developer"];
 let roleIndex = 0;
 let charIndex = 0;
 let deleting = false;
